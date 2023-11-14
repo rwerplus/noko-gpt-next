@@ -1,5 +1,5 @@
 FROM node:18-alpine AS base
-
+RUN echo "http://mirrors.aliyun.com/alpine/v3.14/main/" > /etc/apk/repositories && echo "http://mirrors.aliyun.com/alpine/v3.14/community/" >> /etc/apk/repositories
 FROM base AS deps
 
 RUN apk add --no-cache libc6-compat
